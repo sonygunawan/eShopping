@@ -1,0 +1,43 @@
+﻿<br /><br /><br /><br /><br /><br />
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="code" class="col-sm-2 control-label">Code</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" id="code" placeholder="e.g. E10">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" id="name" placeholder="e.g. Mikhail Gorbachef">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="birthDate" class="col-sm-2 control-label">Birthdate</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" id="birthDate" placeholder="dd-mm-yyyy">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-7">
+            <button type="submit" class="btn btn-primary pull-right">Save</button>
+        </div>
+    </div>
+</form>
+
+<table class="table table-hover table-strip">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Birth Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="p in entities" ng-click="selectEntity(p)">
+            <td>{{p.code}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.birthDate}}</td>
+        </tr>
+    </tbody>
+</table>
