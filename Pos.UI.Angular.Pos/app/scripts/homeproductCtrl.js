@@ -9,6 +9,8 @@ pos.controller('homeproductCtrl', function ($scope, $http) {
     }
 
     $scope.refresh = function () {
+
+    //alert($http.current.params);
         var prom = $http.get(url);
         prom.success(function (data) {
             $scope.entities = data;
@@ -17,4 +19,5 @@ pos.controller('homeproductCtrl', function ($scope, $http) {
     }
 
     $scope.refresh();
+    //alert(params.categoriesId);
 });

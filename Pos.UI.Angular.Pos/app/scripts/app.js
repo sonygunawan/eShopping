@@ -9,6 +9,10 @@ pos.config(function ($routeProvider) {
         templateUrl: 'app/views/homeproduct.html',
         controller: "homeproductCtrl"
     })
+    .when('/homeproduct/:categoriesId', {
+        templateUrl: 'app/views/homeproduct.html',
+        controller: 'homeproductCtrl'
+      })
     .when('/products', {
         templateUrl: 'app/views/products.html',
         controller: 'productCtrl'
@@ -19,5 +23,6 @@ pos.config(function ($routeProvider) {
     })
     .otherwise({
         redirectTo: '/'
-    })
+    });
+
 });
