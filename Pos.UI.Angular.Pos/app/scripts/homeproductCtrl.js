@@ -3,7 +3,7 @@ var pos = angular.module('pos');
 pos.controller('homeproductCtrl', function ($scope, $http) {
     var url = "http://localhost:3677/api/product";
     $scope.selectedEntity = {};
-
+    
     $scope.selectEntity = function (entity) {
         $scope.selectedEntity = entity;
     }
@@ -17,7 +17,7 @@ pos.controller('homeproductCtrl', function ($scope, $http) {
         });
 
     }
-
+    alert('text');
     $scope.refresh();
-    //alert(params.categoriesId);
+    
 });

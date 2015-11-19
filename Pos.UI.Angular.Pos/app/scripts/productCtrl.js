@@ -6,6 +6,7 @@ pos.controller('productCtrl', function ($scope, $http) {
 
     $scope.selectEntity = function (entity) {
         $scope.selectedEntity = entity;
+        //alert(JSON.stringify(entity));
     }
 
     $scope.create = function () {
