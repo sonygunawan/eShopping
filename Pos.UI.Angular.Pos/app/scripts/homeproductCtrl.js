@@ -6,8 +6,20 @@ pos.controller('homeproductCtrl', function ($scope, $routeParams, $location, $ht
     //$scope.idParam = $routeParams.categoriesId;
     $scope.idParam = "TestidParam";
     $scope.categoriesIdParam = $routeParams.categoriesId;
-    
+    //expect($routeParams.categoriesId).toBe('Food');
+    //alert($routeParams.categoriesId);
     //$location.path('/tasks/' + idParam + '/edit/');
+    $scope.myFilter = function (item) { 
+        var catName = $scope.categoriesIdParam;
+        alert($routeParams.categoriesId);
+        var catId = "";
+        if (categoriesId == "Food")
+            catId = "1";
+        else (categoriesId == "Drinks")
+            catId = "2";
+
+        return catId;
+    };
     $scope.selectEntity = function (entity) {
         $scope.selectedEntity = entity;
     }
@@ -21,7 +33,6 @@ pos.controller('homeproductCtrl', function ($scope, $routeParams, $location, $ht
         });
 
     }
-    alert('text');
     $scope.refresh();
     
 });

@@ -1,7 +1,7 @@
 ﻿<br /><br /><br /><br /><br /><br />
-            <pre>$location.url() = {{idParam}} // params= {{categoriesIdParam}}<br></pre>
-            <p> {{selectedEntity.name}}</p>
-            <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="p in entities">
+            <pre>$location.url() = {{$location.url()}} // params= {{categoriesIdParam}}<br></pre>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="p in entities| filter: { id : 'myFilter'}">
                 <div class="thumbnail">
                     <img src="http://placehold.it/320x150" alt="">
                     <div class="caption">
